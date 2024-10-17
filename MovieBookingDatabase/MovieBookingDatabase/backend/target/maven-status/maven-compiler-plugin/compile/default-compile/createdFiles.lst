@@ -1,0 +1,14 @@
+com\cinema\backend\BackendApplication.class
+com\cinema\backend\config\WebConfig.class
+com\cinema\backend\models\Order.class
+com\cinema\backend\controllers\CinemaHallController.class
+com\cinema\backend\repositories\OrderRepository.class
+com\cinema\backend\repositories\CinemaHallRepository.class
+com\cinema\backend\services\UserService.class
+com\cinema\backend\models\User.class
+com\cinema\backend\repositories\UserRepository.class
+com\cinema\backend\controllers\OrderController.class
+com\cinema\backend\controllers\UserController.class
+com\cinema\backend\dto\CinemaHallUpdateDTO.class
+com\cinema\backend\dto\LoginResponseDTO.class
+com\cinema\backend\models\CinemaHall.class
