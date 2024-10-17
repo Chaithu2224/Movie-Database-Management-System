@@ -199,7 +199,7 @@ function SeatPlan({ movie }) {
               className='bg-green-500 hover:bg-green-700 text-white rounded px-3 py-2 text-sm font-semibold cursor-pointer'
               onClick={handleButtonClick}
             >
-              Buy at <span className='total font-semibold'>{totalPrice}€</span>
+              Buy at <span className='total font-semibold'>{totalPrice}$</span>
             </button>
           </div>
         ) : (
