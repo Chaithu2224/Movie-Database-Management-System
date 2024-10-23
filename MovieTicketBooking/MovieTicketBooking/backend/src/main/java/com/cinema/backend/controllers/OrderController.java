@@ -14,11 +14,13 @@ public class OrderController {
     private OrderRepository orderRepository;
 
     @PostMapping("/api/v1/order")
+    @CrossOrigin(origins = "http://localhost:3001/")
     Order newOrder(@RequestBody Order newOrder) {
         return orderRepository.save(newOrder);
     }
 
     @GetMapping("/api/v1/order/{userId}")
+    @CrossOrigin(origins = "http://localhost:3001/")
     Optional<Order> getLastOrderByUserId(@PathVariable Long userId) {
         return orderRepository.findFirstByCustomerIdOrderByCreatedAtDesc(userId);
     }

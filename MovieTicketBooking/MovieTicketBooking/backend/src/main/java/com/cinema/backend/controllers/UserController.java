@@ -6,6 +6,7 @@ import com.cinema.backend.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,11 +18,13 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/api/v1/register")
+    @CrossOrigin(origins = "http://localhost:3001/")
     User newUser(@RequestBody User newUser) {
         return userService.registerUser(newUser);
     }
 
     @PostMapping("/api/v1/login")
+    @CrossOrigin(origins = "http://localhost:3001/")
     public ResponseEntity<LoginResponseDTO> loginUser(@RequestBody User loginRequest) {
         User user = userService.getUserByEmail(loginRequest.getEmail());
 
