@@ -71,4 +71,13 @@ class PaymentControllerTest {
                 .content("{\"amount\": 50}"))
                 .andExpect(status().isInternalServerError());
     }
+
+    @Test
+    void testCreatePaymentIntent_successful2() throws Exception {
+        mockMvc.perform(post("/api/payment/create-payment-intent")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"amount\": 50}"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.clientSecret").value("test_secret"));
+    }
 }
