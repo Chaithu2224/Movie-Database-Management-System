@@ -17,6 +17,7 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
+    // Added Http POST Request for Payment Controller
     @PostMapping("/create-payment-intent")
     public Map<String, Object> createPaymentIntent(@RequestBody Map<String, Object> request) throws Exception {
         int amount = (int) request.get("amount");
