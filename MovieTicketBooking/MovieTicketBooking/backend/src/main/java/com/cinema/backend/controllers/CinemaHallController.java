@@ -18,7 +18,7 @@ public class CinemaHallController {
     private CinemaHallRepository cinemaHallRepository;
 
     @GetMapping("/api/v1/movie/{movieId}/{movieSession}")
-    @CrossOrigin(origins = "https:http://localhost:3001/")
+    @CrossOrigin(origins = "http://localhost:3001/")
     public ResponseEntity<?> getUpdatedSeats(@PathVariable Long movieId, @PathVariable String movieSession) {
         Optional<CinemaHall> cinemaHallOptional = cinemaHallRepository.findByMovieIdAndMovieSession(movieId,
                 movieSession);
