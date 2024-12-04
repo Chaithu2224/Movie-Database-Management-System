@@ -15,6 +15,7 @@ public class WebConfig {
 
     private static final Long MAX_AGE = 3600L;
 
+    // CORS Configuration to allow requests from frontend (localhost:3000)
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
@@ -38,10 +39,9 @@ public class WebConfig {
         return new CorsFilter(source);
     }
 
+    // BCryptPasswordEncoder bean for password encryption
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
-
 }
